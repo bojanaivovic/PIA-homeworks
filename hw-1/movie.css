@@ -68,20 +68,23 @@ footer{
 }
 
 .quotebubble{
-    width: 90%;
-    font-family: : Georgia, 'Times New Roman', Times, serif;
+    max-width: 90%;
+    position: relative;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 13pt;
     background-color: #FFFFFF;
     border: 2px solid #CCCCCC; 
     border-radius: 12px;
     padding: 1em;
+    text-align: justify;
+    margin: auto;
     
 }
 .text-sadrzaj{
     padding: 1rem;
 }
 
-.quo, .crit{
+.quo, .critic{
     margin-right: 5px;
     margin-bottom: 5px;
     float: left;
@@ -97,10 +100,6 @@ footer{
 .publication{
     font-size: 13pt;
     font-style: italic;
-}
-
-.quo{
-    vertical-align: middle;
 }
 
 dl{
