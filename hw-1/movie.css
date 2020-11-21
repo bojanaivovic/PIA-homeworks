@@ -81,22 +81,47 @@ footer{
     padding: 1rem;
 }
 
-q, .critic{
-    margin-left: 5px;
+.quo, .crit{
+    margin-right: 5px;
+    margin-bottom: 5px;
+    float: left;
 }
 
 
 .kritika{
     font-size: 13pt;
     font-weight: bold;
-    margin-bottom: 20pt;  
-    
+    padding-left: 10px;
 }
 
 .publication{
-    font-family: cursive;
-    font-weight: none;
+    font-size: 13pt;
+    font-style: italic;
 }
+
 .quo{
     vertical-align: middle;
+}
+
+dl{
+    padding: 15px;
+}
+
+dt{
+    font-weight: bold;
+}
+
+dd{
+    margin-bottom: 15px;
+}
+
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#w3c{
+    right: 0px;
+    position: absolute;
 }
