@@ -30,7 +30,7 @@ h1{
 
 footer{
     background-color: #A2B964;
-    padding: 0.5em;
+    padding: 0.5em 0;
     text-align: center;
     max-width: 55%;
     margin: auto;
@@ -76,6 +76,9 @@ footer{
     border-radius: 12px;
     padding: 1em;
     
+}
+.text-sadrzaj{
+    padding: 1rem;
 }
 
 q, .critic{
