@@ -55,12 +55,13 @@ h1{
 .row{
     display: flex;
     padding: 0 20px;
+    margin: auto;
 }
 
 .column{
-    flex: 25%;
-    max-width: 25%;
-    padding: 0 20px;
+    flex: 33%;
+    max-width: 33%;
+    padding: 0 75px;
 }
 
 .column img{
