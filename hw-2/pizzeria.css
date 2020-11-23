@@ -1,0 +1,52 @@
+body{
+    background-image: url(images/pozadina1.jpg);
+}
+
+nav{
+    background-color: white;
+}
+
+.navbar-brand{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 24pt;
+}
+
+ul li a{
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+ul li:hover{
+    background-color: gray;
+}
+
+.slika{
+    width:100%;
+}
+
+h1{
+    text-align: center;
+    font-size: 24pt;
+    font-weight: bold;
+    color: black;
+    font-family: cursive;
+}
+
+.p-uvod{
+    border: 1px solid black;
+    padding: 15px;
+    margin: 0 200px;
+    background-color: black;
+}
+
+.uvod{
+    font-family: cursive;
+    font-size: 12pt;
+    text-align: justify;
+    color: wheat;
+}
+
+.item{
+    max-height: 450px;
+}
