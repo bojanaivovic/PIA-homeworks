@@ -50,3 +50,30 @@ h1{
 .item{
     max-height: 450px;
 }
+
+
+.row{
+    display: flex;
+    padding: 0 20px;
+}
+
+.column{
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 20px;
+}
+
+.column img{
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+}
+
+.img{
+    max-height: 400px;
+    padding: 10px 0;
+}
+
+.img:hover {
+    opacity: 0.7;
+}
