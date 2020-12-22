@@ -9,6 +9,8 @@
   <meta name="description" content="HTML/CSS homework assignment." />
   <meta name="keywords" content="pia, web programming, html, css, bootstrap, javascript, jquery" />
   <link rel="stylesheet" type="text/css" href="quiz.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
   <link rel="icon" href="https://www.flaticon.com/svg/static/icons/svg/61/61951.svg"/>
 </head>
 
@@ -20,9 +22,16 @@
     <div id="podaci_korisnika">
          <form name="form" action="#">
              <label id="ime_i_prezime" for="name"> Unesi ime i prezime: </label><br><br>
-            <input type="text" id="input_name" name="name" placeholder="Unesi ime i prezime" required><br><br>
-            <button class="dalje" onclick="myFunction()">Dalje</button>
+            <input type="text" id="input_name" name="name" placeholder="Unesi ime i prezime"><br><br>
+            <button type="button" class="dalje" onclick="myFunction()">Dalje</button>
         </form>       
+    </div>
+    <div class="alert hide">
+        <span class="fas fa-exclamation-circle"></span>
+        <span class="msg">Nisu uneti podaci!</span>
+        <span class="close-btn">
+            <span class="fas fa-times"></span>
+        </span>
     </div>
     <div id="pravila_kviza">
         <div class="naslov_pravila">
@@ -39,14 +48,14 @@
             </ul>
         </div>
         <div class="dugmad">
-            <button class="izlaz">Izađi iz kviza</button>
+            <button class="izlaz" onclick="nazad()">Nazad</button>
             <button class="nastavak">Počni kviz</button>
         </div>
     </div>
 </div>
 <div class="kolona_3">
 </div>
-<<script src="quiz.js"></script>
+<script src="quiz.js"></script>
 </body>
 
 </html>
