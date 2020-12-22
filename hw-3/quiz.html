@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<!-- Domaci 3 (PIA 2020) -->
+
+<head>
+  <title>PIA HW - QUIZ </title>
+  <meta name="author" content="Bojana_Ivovic" />
+  <meta charset="utf-8" />
+  <meta name="description" content="HTML/CSS homework assignment." />
+  <meta name="keywords" content="pia, web programming, html, css, bootstrap, javascript, jquery" />
+  <link rel="stylesheet" type="text/css" href="quiz.css">
+  <link rel="icon" href="https://www.flaticon.com/svg/static/icons/svg/61/61951.svg"/>
+</head>
+
+<body>
+<div class="kolona_1">
+</div>
+<div class="kolona_2">
+    <h1>Kviz znanja</h1>
+    <div id="podaci_korisnika">
+         <form name="form" action="#">
+             <label id="ime_i_prezime" for="name"> Unesi ime i prezime: </label><br><br>
+            <input type="text" id="input_name" name="name" placeholder="Unesi ime i prezime" required><br><br>
+            <button class="dalje" onclick="myFunction()">Dalje</button>
+        </form>       
+    </div>
+    <div id="pravila_kviza">
+        <div class="naslov_pravila">
+            <span> Pravila kviza</span>
+        </div>
+        <div class="lista_pravila">
+            <ul>
+                <li>Kviz sadrži <b>10 pitanja</b>, od kojih neka imaju ponuđene odgovore, dok druga podrazumevaju unos sa tastature.</li>
+                <li>Za svako pitanje korisnik ima <b>20 sekundi</b> da odgovori.</li>
+                <li>Nakon isteka vremena, prelazi se na naredno pitanje iako korisnik ne odgovori.</li>
+                <li>Nije moguće vratiti se na prethodno pitanje.</li>
+                <li>Svaki tačan odgovor nosi <b>1 poen</b>. Podaci se čuvaju iako korisnik napusti igru.</li>
+                <li>Po završetku kviza biće prikazana tabela sa <b>10 najboljih rezultata</b>.</li>
+            </ul>
+        </div>
+        <div class="dugmad">
+            <button class="izlaz">Izađi iz kviza</button>
+            <button class="nastavak">Počni kviz</button>
+        </div>
+    </div>
+</div>
+<div class="kolona_3">
+</div>
+<<script src="quiz.js"></script>
+</body>
+
+</html>

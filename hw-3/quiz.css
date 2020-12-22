@@ -1,0 +1,112 @@
+body{
+    background-color: black;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+ font-size: 30pt;   
+ text-align: center;
+ font-weight: bold;
+ font-family: cursive;
+ color: white;
+}
+
+.kolona_1{
+    width: 10%;
+    background-image: url('images/question_mark.jpg');
+    background-repeat: repeat;
+    background-position: center;
+}
+
+.kolona_2{
+    width: 80%;
+}
+
+.kolona_3{
+    width: 10%;
+    background-image: url('images/question_mark.jpg');
+    background-repeat: repeat;
+    background-position: center;
+}
+
+#podaci_korisnika{
+    text-align: center;
+}
+
+form{
+    margin: 250px auto;
+}
+#ime_i_prezime{
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+    font-size: 20pt;
+}
+
+#input_name{
+    width: 20em;
+    height: 3em;
+}
+
+.dalje{
+    margin-left: 18%;
+    padding: 10px;
+    box-shadow: 2px 2px 3px #585858;
+    border-radius: 5px;
+    background-color: darkslategrey;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#pravila_kviza{
+    margin: 150px auto;
+    display: none;
+    width: 600px;
+    background-color: white;
+    border-radius: 13px;
+}
+
+.naslov_pravila{
+    width: 100%;
+    height: 40px;
+    border-bottom: 5px solid black;
+    font-size: 20pt;
+    font-weight: bold;
+    padding: 10px 0 10px 15px;
+}
+
+.lista_pravila{
+    padding: 10px 25px;
+}
+li{
+    margin: 15px 0;
+}
+button:hover{
+    background-color: grey;
+    color: white;
+}
+
+.dugmad{
+    display: flex;
+    justify-content: flex-end;
+    background-color: black;
+}
+
+.izlaz, .nastavak{
+    margin: 10px;
+    padding: 10px;
+    box-shadow: 2px 2px 3px #585858;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.nastavak{
+    background-color: darkslategrey;
+    color: white;
+}
+.izlaz{
+    background-color: lightgrey;
+    color:  darkslategrey;
+}
