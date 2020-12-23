@@ -39,7 +39,7 @@
         </div>
         <div class="lista_pravila">
             <ul>
-                <li>Kviz sadrži <b>10 pitanja</b>, od kojih neka imaju ponuđene odgovore, dok druga podrazumevaju unos sa tastature.</li>
+                <li>Kviz sadrži <b>10 pitanja</b>, od kojih neka imaju ponuđene odgovore (od kojih je samo jedan tačan), dok druga podrazumevaju unos sa tastature.</li>
                 <li>Za svako pitanje korisnik ima <b>20 sekundi</b> da odgovori.</li>
                 <li>Nakon isteka vremena, prelazi se na naredno pitanje iako korisnik ne odgovori.</li>
                 <li>Nije moguće vratiti se na prethodno pitanje.</li>
@@ -49,7 +49,20 @@
         </div>
         <div class="dugmad">
             <button class="izlaz" onclick="nazad()">Nazad</button>
-            <button class="nastavak">Počni kviz</button>
+            <button class="nastavak" onclick="start()">Počni kviz</button>
+        </div>
+    </div>
+    <div class="pitanja">
+        <p id="text"></p>
+        <div class="odgovori">
+            <button class="btn" id="odg1">Tekst</button>
+            <button class="btn" id="odg2">Tekst</button>
+            <button class="btn" id="odg3">Tekst</button>
+            <button class="btn" id="odg4">Tekst</button>
+        </div>
+        <div class="dugmad">
+            <button class="izlaz">Izlaz iz kviza</button>
+            <button class="nastavak" onclick="next()">Sledeće pitanje</button>
         </div>
     </div>
 </div>

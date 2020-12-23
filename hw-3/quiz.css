@@ -1,5 +1,5 @@
 body{
-    background-color: black;
+    background-color:black;
     display: flex;
     margin: 0;
     padding: 0;
@@ -131,7 +131,6 @@ form{
 }
 
 .naslov_pravila{
-    width: 100%;
     height: 40px;
     border-bottom: 5px solid black;
     font-size: 20pt;
@@ -171,4 +170,36 @@ button:hover{
 .izlaz{
     background-color: lightgrey;
     color:  darkslategrey;
+}
+
+.pitanja{
+    width: 700px;
+    margin: 150px auto;
+    background-color: #f9eae1;
+}
+
+#text{
+    background-color: black;
+    color: #cc8b86;
+    font-size: 20pt;
+    text-align: center;
+    padding: 15px;
+    font-weight: bold;
+}
+
+.btn{
+    padding: 10px;
+    color: #f9eae1;
+    background-color:black;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 13px;
+    cursor: pointer;
+}
+
+.odgovori{
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 30px;
+    margin: 30px;   
 }
