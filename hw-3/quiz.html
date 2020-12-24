@@ -20,11 +20,11 @@
 <div class="kolona_2">
     <h1>Kviz znanja</h1>
     <div id="podaci_korisnika">
-         <form name="form" action="#">
+         <form name="form">
              <label id="ime_i_prezime" for="name"> Unesi ime i prezime: </label><br><br>
             <input type="text" id="input_name" name="name" placeholder="Unesi ime i prezime"><br><br>
             <button type="button" class="dalje" onclick="myFunction()">Dalje</button>
-        </form>       
+        </form>
     </div>
     <div class="alert hide">
         <span class="fas fa-exclamation-circle"></span>
@@ -53,12 +53,16 @@
         </div>
     </div>
     <div class="pitanja">
-        <p id="text"></p>
+        <div class="vrh">
+            <div id="poeni"></div>
+            <div id="tajmer"><div id="vreme_text">Vreme: </div><div id="vreme_sec"></div></div>
+        </div>
+        <div id="text"></div>
         <div class="odgovori">
-            <button class="btn" id="odg1">Tekst</button>
-            <button class="btn" id="odg2">Tekst</button>
-            <button class="btn" id="odg3">Tekst</button>
-            <button class="btn" id="odg4">Tekst</button>
+            <button class="btn" id="odg1" onclick="tacanOdgovor(this)">Tekst</button>
+            <button class="btn" id="odg2" onclick="tacanOdgovor(this)">Tekst</button>
+            <button class="btn" id="odg3" onclick="tacanOdgovor(this)">Tekst</button>
+            <button class="btn" id="odg4" onclick="tacanOdgovor(this)">Tekst</button>
         </div>
         <div class="dugmad">
             <button class="izlaz">Izlaz iz kviza</button>

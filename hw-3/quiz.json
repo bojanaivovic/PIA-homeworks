@@ -1,19 +1,43 @@
-{
-    "prvo_pitanje":"Ko je napisao knjigu 'Slika Dorijana Greja'?",
-    "odgovori_pitanja1": ["Džejn Ostin","Oskar Vajld", "Oskar Davičo","Mark Tven"],
-    "drugo_pitanje":"Šta je grafit?",
-    "odgovori_pitanja2": ["Mineral","Vitamin","Teški metal","Legura"],
-    "trece_pitanje":"Sa koje je planete Supermen?",
-    "odgovori_pitanja3":["Jupiter","Zemlja","Kripton","Mars"],
-    "cetvrto_pitanje":"U kojoj zemlji se 1989. godine odigrala 'Plišana revolucija'",
-    "odgovori_pitanja4":["Bugarska","Rusija","Čehoslovačka","Nemačka"],
-    "peto_pitanje":"Šta oboljeva usled nedostatka joda?",
-    "odgovori_pitanja5":["Hipofiza","Štitna žlezda","Nadbubrežna žlezda","Mozak"],
-    "sesto_pitanje":"Maču Pikču je sveti grad:",
-    "odgovori_pitanja6":["Inka","Maja","Tolteka","Asteka"],
-    "sedmo_pitanje":"Koje je najdublje jezero na svetu?",
-    "odgovori_pitanja7": ["Bajkalsko jezero","Kaspijsko jezero","Viktorijino jezero","Gornje jezero"],
+[
+  {
+    "pitanje":"Ko je napisao knjigu 'Slika Dorijana Greja'?",
+    "odgovori": ["Džejn Ostin","Oskar Vajld", "Oskar Davičo","Mark Tven"]
+  },
+  {
+    "pitanje":"Šta je grafit?",
+    "odgovori": ["Vitamin","Mineral","Teški metal","Legura"]
+  },
+  {
+    "pitanje":"Sa koje je planete Supermen?",
+    "odgovori":["Jupiter","Kripton","Zemlja","Mars"]
+  },
+  {
+    "pitanje":"U kojoj zemlji se 1989. godine odigrala 'Plišana revolucija'",
+    "odgovori":["Bugarska","Čehoslovačka","Rusija","Nemačka"]
+  },
+  {
+    "pitanje":"Šta oboljeva usled nedostatka joda?",
+    "odgovori":["Hipofiza","Štitna žlezda","Nadbubrežna žlezda","Mozak"]
+  },
+  {
+    "pitanje":"Maču Pikču je sveti grad:",
+    "odgovori":["Maja","Inka","Tolteka","Asteka"]
+  },
+  {
+    "pitanje":"Koje je najdublje jezero na svetu?",
+    "odgovori": ["Kaspijsko jezero","Bajkalsko jezero","Viktorijino jezero","Gornje jezero"]
+  },
+  {
     "osmo_pitanje":"Koji naučnik je otkrio ćeliju?",
+    "odgovor_pitanja8":"Robert Huk"
+  },
+  {
     "deveto_pitanje":"Koliko krugova Pakla ima u Danteovoj Božanstvenoj komediji?",
-    "deseto_pitanje":"Koje godine se završio drugi svetski rat?"
-}
+    "odgovor_pitanja9":"9"
+  },
+  {
+    "deseto_pitanje":"Koje godine se završio drugi svetski rat?",
+    "odgovor_pitanja19":"1945."
+  }
+]
+ 
