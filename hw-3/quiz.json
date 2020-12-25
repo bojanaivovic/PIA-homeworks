@@ -1,42 +1,42 @@
 [
   {
-    "pitanje":"Ko je napisao knjigu 'Slika Dorijana Greja'?",
+    "pitanje":"1. Ko je napisao knjigu 'Slika Dorijana Greja'?",
     "odgovori": ["Džejn Ostin","Oskar Vajld", "Oskar Davičo","Mark Tven"]
   },
   {
-    "pitanje":"Koji naučnik je otkrio ćeliju?",
+    "pitanje":"2. Koji naučnik je otkrio ćeliju?",
     "odgovori":"ROBERT HUK"
   },
   {
-    "pitanje":"Šta je grafit?",
+    "pitanje":"3. Šta je grafit?",
     "odgovori": ["Vitamin","Mineral","Teški metal","Legura"]
   },
   {
-    "pitanje":"Koliko krugova Pakla ima u Danteovoj Božanstvenoj komediji?",
+    "pitanje":"4. Koliko krugova Pakla ima u Danteovoj Božanstvenoj komediji?",
     "odgovori":"9"
   },
   {
-    "pitanje":"Sa koje je planete Supermen?",
+    "pitanje":"5. Sa koje je planete Supermen?",
     "odgovori":["Jupiter","Kripton","Zemlja","Mars"]
   },
   {
-    "pitanje":"Najmanja jedinica građe bubrega?",
+    "pitanje":"6. Najmanja jedinica građe bubrega?",
     "odgovori": "NEFRON"
   },
   {
-    "pitanje":"Maču Pikču je sveti grad:",
+    "pitanje":"7. Maču Pikču je sveti grad:",
     "odgovori":["Maja","Inka","Tolteka","Asteka"]
   },
   {
-    "pitanje":"Koje godine se završio drugi svetski rat?",
+    "pitanje":"8. Koje godine se završio drugi svetski rat?",
     "odgovori":"1945."
   },
   {
-    "pitanje":"Šta oboljeva usled nedostatka joda?",
+    "pitanje":"9. Šta oboljeva usled nedostatka joda?",
     "odgovori":["Hipofiza","Štitna žlezda","Nadbubrežna žlezda","Mozak"]
   },
   {
-    "pitanje":"Koji je glavni grad Egipta?",
+    "pitanje":"10. Koji je glavni grad Egipta?",
     "odgovori":"KAIRO"
   }
 ]

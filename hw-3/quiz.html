@@ -11,6 +11,7 @@
   <link rel="stylesheet" type="text/css" href="quiz.css">
   <script src="https://kit.fontawesome.com/a076d05399.js"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <script src='https://kit.fontawesome.com/a076d05399.js'></script>
   <link rel="icon" href="https://www.flaticon.com/svg/static/icons/svg/61/61951.svg"/>
 </head>
 
@@ -55,7 +56,7 @@
     <div class="pitanja">
         <div class="vrh">
             <div id="poeni"></div>
-            <div id="tajmer"><div id="vreme_text">Vreme: </div><div id="vreme_sec"></div></div>
+            <div id="tajmer"><div id="vreme_text">Vreme: </div><div id="vreme_sec">20</div></div>
         </div>
         <div id="text"></div>
         <div class="odgovori_4">
@@ -65,14 +66,18 @@
             <button class="btn" id="odg4" onclick="tacanOdgovor(this)">Tekst</button>
         </div>
         <div class="odgovori_dopuna">
-                <input type="text" id="tekstualni_odgovor">
+                <input type="text" id="tekstualni_odgovor" autocomplete="off">
                 <input type="button" value="Pokušaj" onclick="datOdgovor()" id="potvrdi">
             <p id="prikaz_odg"></p>
         </div>
         <div class="dugmad">
-            <button class="izlaz">Izlaz iz kviza</button>
+            <button class="izlaz" onclick="prikaziRezultat()">Izlaz iz kviza</button>
             <button class="nastavak" id="next" onclick="sledecePitanje()">Sledeće pitanje</button>
         </div>
+    </div>
+    <div id="rezl" clas="rez" style="display: none;">
+        <span id="rezUcesnika" class="rezultat"></span> <span class="rezultat">&nbsp;poena!</span><br><br><br>
+        <button id="igrajPonovo" onclick="igrajPonovo()">Igraj ponovo</button>
     </div>
 </div>
 <div class="kolona_3">

@@ -47,6 +47,7 @@ form{
 }
 
 #input_name{
+    font-weight: bold;
     width: 20em;
     height: 3em;
 }
@@ -60,6 +61,7 @@ form{
     color: white;
     font-weight: bold;
     cursor: pointer;
+    outline: transparent;
 }
 
 .alert{
@@ -162,6 +164,7 @@ button:hover{
     border-radius: 5px;
     font-weight: bold;
     cursor: pointer;
+    outline: transparent;
 }
 .nastavak{
     background-color: darkslategrey;
@@ -195,13 +198,14 @@ button:hover{
     text-transform: uppercase;
     border-radius: 13px;
     cursor: pointer;
+    outline: transparent;
 }
 
 .odgovori_4{
     display: grid;
     grid-template-columns: repeat(2, auto);
     gap: 30px;
-    margin: 30px;   
+    margin: 20px;   
 }
 
 .vrh{
@@ -241,6 +245,7 @@ button:hover{
 
 #vreme_sec{
     background-color: #84a59d;
+    color: black;
     border-radius: 50%;
     font-weight: 500;
     width: 30px;
@@ -250,8 +255,8 @@ button:hover{
 
 .odgovori_dopuna{
     display: grid;
-    gap: 10px;
-    margin: 30px; 
+    gap: 30px;
+    margin: 15px; 
     
 }
 
@@ -273,9 +278,36 @@ button:hover{
 #potvrdi{
     margin: 10px;
     padding: 10px;
-    box-shadow: 2px 2px 3px #585858;
+    box-shadow: 2px 2px 3px darkgrey;
     border-radius: 5px;
     font-weight: bold;
     cursor: pointer;
     background-color: #cc8b86;
+}
+
+#rezl{
+    padding-top: 200px;
+    align-self: middle;
+    height: 300px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.rezultat{
+    color: white;
+    text-align: center;
+    text-align: middle;
+}
+
+#igrajPonovo{
+    padding: 10px;
+    background-color: #f9eae1;
+    color:black;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 13px;
+    cursor: pointer;
+    outline: transparent;
+    box-shadow: 2px 2px 3px #585858;
 }
