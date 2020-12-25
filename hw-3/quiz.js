@@ -240,8 +240,10 @@ function sacuvajRezultat(){
     rezultati.push(poeni);
     imena.push(ime);
   }
-  localStorage.setItem("imena", JSON.stringify(imena));
-  localStorage.setItem("rezultati", JSON.stringify(rezultati));
+  if(rezultati.length<11){
+    localStorage.setItem("imena", JSON.stringify(imena));
+    localStorage.setItem("rezultati", JSON.stringify(rezultati));
+  }
 }
 
 function upisiUTabelu(){
