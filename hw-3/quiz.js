@@ -12,7 +12,7 @@ fetch('quiz.json').then(function(response){
     pitanja = obj;
 });
 
-function myFunction(){
+function dalje(){
   var input_name=document.forms["form"]["input_name"].value;
   if(input_name==""){
       $('.alert').removeClass("hide");
@@ -51,6 +51,7 @@ function pokaziPitanje(){
   $(".btn").css('background-color', 'black');
   $(".btn").attr("disabled", false);
   $("#next").attr("disabled", false); 
+  $("#potvrdi").attr("disabled", false); 
   if(brojac>9){
     prikaziRezultat();
     return 0;
@@ -88,6 +89,7 @@ function tacanOdgovor(btn){
         btn.style.backgroundColor = "#49a078";
         $(".btn").attr("disabled", "disabled");
         $("#next").attr("disabled", "disabled"); 
+        $("#potvrdi").attr("disabled", "disabled"); 
         brojac+=1;
         dodajPoen();
         setTimeout(pokaziPitanje, 3000);                                 
@@ -107,6 +109,7 @@ function nadjiOdgovor(){
     document.getElementById("odg1").style.backgroundColor = "#49a078";
     $(".btn").attr("disabled", "disabled");
     $("#next").attr("disabled", "disabled"); 
+    $("#potvrdi").attr("disabled", "disabled"); 
     brojac+=1;
     setTimeout(pokaziPitanje, 3000); 
   }
@@ -114,6 +117,7 @@ function nadjiOdgovor(){
     document.getElementById("odg2").style.backgroundColor = "#49a078";
     $(".btn").attr("disabled", "disabled");
     $("#next").attr("disabled", "disabled"); 
+    $("#potvrdi").attr("disabled", "disabled"); 
     brojac+=1;
     setTimeout(pokaziPitanje, 3000); 
   }
@@ -121,6 +125,7 @@ function nadjiOdgovor(){
     document.getElementById("odg3").style.backgroundColor = "#49a078";
     $(".btn").attr("disabled", "disabled");
     $("#next").attr("disabled", "disabled"); 
+    $("#potvrdi").attr("disabled", "disabled"); 
     brojac+=1;
     setTimeout(pokaziPitanje, 3000); 
   }
@@ -128,6 +133,7 @@ function nadjiOdgovor(){
     document.getElementById("odg4").style.backgroundColor = "#49a078";
     $(".btn").attr("disabled", "disabled");
     $("#next").attr("disabled", "disabled"); 
+    $("#potvrdi").attr("disabled", "disabled"); 
     brojac+=1;
     setTimeout(pokaziPitanje, 3000); 
   }
@@ -144,6 +150,7 @@ function datOdgovor(){
       brojac+=1;
       $(".btn").attr("disabled", "disabled");
       $("#next").attr("disabled", "disabled"); 
+      $("#potvrdi").attr("disabled", "disabled"); 
       setTimeout(pokaziPitanje, 3000); 
     }
     else{
@@ -151,6 +158,7 @@ function datOdgovor(){
       brojac+=1;
       $(".btn").attr("disabled", "disabled");
       $("#next").attr("disabled", "disabled"); 
+      $("#potvrdi").attr("disabled", "disabled"); 
       setTimeout(pokaziPitanje, 3000); 
     }
 }
@@ -159,6 +167,7 @@ function sledecePitanje(){
     brojac+=1;
     $(".btn").attr("disabled", "disabled");
     $("#next").attr("disabled", "disabled");
+    $("#potvrdi").attr("disabled", "disabled"); 
     pokaziPitanje();
 }
 
@@ -178,11 +187,68 @@ let countDown=()=>{
   }
 }
 function prikaziRezultat(){
+  clearInterval(tajmer);
   $('.pitanja').hide();
   $('#rezl').show();
+  $('#najboljiRezultati').hide();
   document.getElementById("rezUcesnika").innerHTML = ime + " osvojili ste " + poeni.toString();
+  sacuvajRezultat();
 }
 
 function igrajPonovo(){
   location.reload();
+}
+
+function tabela(){
+  $('#rezl').hide();
+  $('#najboljiRezultati').show();
+  upisiUTabelu();
+}
+
+function sacuvajRezultat(){
+  var imena = JSON.parse(localStorage.getItem("imena"));
+  var rezultati = JSON.parse(localStorage.getItem("rezultati"));
+  var pom1;
+  var pom2;
+  if(rezultati==null){
+    rezultati = [];
+    imena = [];
+    rezultati[0] = poeni;
+    imena[0] = ime;
+  }
+  else{
+    for(var i=0;i<rezultati.length;i++){
+      if(rezultati[i]==poeni){
+        if(imena[i]>ime){
+          pom1 = imena[i];
+          pom2 = rezultati[i];
+          imena[i]=ime;
+          rezultati[i]=poeni;
+          ime = pom1;
+          poeni = pom2;
+        }
+      }
+      else if(rezultati[i]<poeni){
+        pom1 = imena[i];
+        pom2 = rezultati[i];
+        imena[i]=ime;
+        rezultati[i]=poeni;
+        ime = pom1;
+        poeni = pom2;
+      }
+    }
+    rezultati.push(poeni);
+    imena.push(ime);
+  }
+  localStorage.setItem("imena", JSON.stringify(imena));
+  localStorage.setItem("rezultati", JSON.stringify(rezultati));
+}
+
+function upisiUTabelu(){
+  var imena = JSON.parse(localStorage.getItem("imena"));
+  var rezultati = JSON.parse(localStorage.getItem("rezultati"));
+  for(var i=0;i<rezultati.length;i++){
+    document.getElementById("igrac"+(i+1).toString()).innerHTML = imena[i];
+    document.getElementById("toprez"+(i+1).toString()).innerHTML = rezultati[i];
+  }
 }

@@ -23,8 +23,8 @@
     <div id="podaci_korisnika">
          <form name="form">
              <label id="ime_i_prezime" for="name"> Unesi ime i prezime: </label><br><br>
-            <input type="text" id="input_name" name="name" placeholder="Unesi ime i prezime"><br><br>
-            <button type="button" class="dalje" onclick="myFunction()">Dalje</button>
+            <input type="text" id="input_name" name="name" placeholder="Unesi ime i prezime" autocomplete="off"><br><br>
+            <button type="button" class="dalje" onclick="dalje()">Dalje</button>
         </form>
     </div>
     <div class="alert hide">
@@ -77,7 +77,67 @@
     </div>
     <div id="rezl" clas="rez" style="display: none;">
         <span id="rezUcesnika" class="rezultat"></span> <span class="rezultat">&nbsp;poena!</span><br><br><br>
-        <button id="igrajPonovo" onclick="igrajPonovo()">Igraj ponovo</button>
+        <button id="igrajPonovo" onclick="igrajPonovo()">Igraj ponovo</button><button id="top10" onclick="tabela()">Top 10</button>
+    </div>
+    <div id="najboljiRezultati" style="display: none;">
+        <table>
+            <tr>
+              <th>Redni broj</th>
+              <th>Ime</th>
+              <th class="toprez">Broj poena</th> 
+            </tr>
+            <tr>
+              <td id="redniBroj">1.</td>
+              <td id="igrac1">Korisnik1</td>
+              <td class="toprez" id="toprez1">0</td>
+            </tr>
+            <tr>
+                <td id="redniBroj">2.</td>
+                <td id="igrac2">def</td>
+                <td class="toprez" id="toprez2">3</td>
+            </tr>
+            <tr>
+                <td id="redniBroj">3.</td>
+                <td id="igrac3"></td>
+                <td class="toprez" id="toprez3"></td>
+            </tr>
+            <tr>
+                <td id="redniBroj">4.</td>
+                <td id="igrac4"></td>
+                <td class="toprez" id="toprez4"></td>
+            </tr>
+            <tr>
+                <td id="redniBroj">5.</td>
+                <td id="igrac5"></td>
+                <td class="toprez" id="toprez5"></td>
+            </tr>
+            <tr>
+                <td id="redniBroj">6.</td>
+                <td id="igrac6"></td>
+                <td class="toprez" id="toprez6"></td>
+            </tr>
+            <tr>
+                <td id="redniBroj">7.</td>
+                <td id="igrac7"></td>
+                <td class="toprez" id="toprez7"></td>
+            </tr>
+            <tr>
+                <td id="redniBroj">8.</td>
+                <td id="igrac8"></td>
+                <td class="toprez" id="toprez8"></td>
+            </tr>
+            <tr>
+                <td id="redniBroj">9.</td>
+                <td id="igrac9"></td>
+                <td class="toprez" id="toprez9"></td>
+            </tr>
+            <tr>
+                <td id="redniBroj">10.</td>
+                <td id="igrac10"></td>
+                <td class="toprez" id="toprez10"></td>
+            </tr>
+          </table><br>
+          <button class="again" id="igrajPonovo" onclick="igrajPonovo()">Igraj ponovo</button>
     </div>
 </div>
 <div class="kolona_3">

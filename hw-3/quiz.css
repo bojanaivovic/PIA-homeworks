@@ -311,3 +311,47 @@ button:hover{
     outline: transparent;
     box-shadow: 2px 2px 3px #585858;
 }
+
+#top10{
+    margin-left: 40px;
+    padding: 10px;
+    background-color: darkslategrey;
+    color:#f9eae1;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 13px;
+    cursor: pointer;
+    outline: transparent;
+    box-shadow: 2px 2px 3px #585858;
+}
+
+table{
+   margin: 0 auto;
+   width: 50%;
+   border: 1px solid black;
+   border-collapse: collapse; 
+   background-color: #e5989b;
+   font-weight: bold;
+}
+th{
+    background-color: #b5838d;
+}
+th, td {
+    padding: 8px;
+    border: 10px solid black;
+  }
+  
+.toprez{
+    text-align: center;
+    width:2px;
+}
+
+#redniBroj{
+    background-color: #b5838d;
+    text-align: center;
+    width: 2px;    
+}
+
+.again{
+    margin-left: 45%;
+}
