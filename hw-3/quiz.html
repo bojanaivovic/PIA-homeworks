@@ -58,15 +58,20 @@
             <div id="tajmer"><div id="vreme_text">Vreme: </div><div id="vreme_sec"></div></div>
         </div>
         <div id="text"></div>
-        <div class="odgovori">
+        <div class="odgovori_4">
             <button class="btn" id="odg1" onclick="tacanOdgovor(this)">Tekst</button>
             <button class="btn" id="odg2" onclick="tacanOdgovor(this)">Tekst</button>
             <button class="btn" id="odg3" onclick="tacanOdgovor(this)">Tekst</button>
             <button class="btn" id="odg4" onclick="tacanOdgovor(this)">Tekst</button>
         </div>
+        <div class="odgovori_dopuna">
+                <input type="text" id="tekstualni_odgovor">
+                <input type="button" value="Pokušaj" onclick="datOdgovor()" id="potvrdi">
+            <p id="prikaz_odg"></p>
+        </div>
         <div class="dugmad">
             <button class="izlaz">Izlaz iz kviza</button>
-            <button class="nastavak" id="next">Sledeće pitanje</button>
+            <button class="nastavak" id="next" onclick="sledecePitanje()">Sledeće pitanje</button>
         </div>
     </div>
 </div>

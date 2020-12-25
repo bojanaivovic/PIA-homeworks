@@ -197,7 +197,7 @@ button:hover{
     cursor: pointer;
 }
 
-.odgovori{
+.odgovori_4{
     display: grid;
     grid-template-columns: repeat(2, auto);
     gap: 30px;
@@ -246,4 +246,36 @@ button:hover{
     width: 30px;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);
 
+}
+
+.odgovori_dopuna{
+    display: grid;
+    gap: 10px;
+    margin: 30px; 
+    
+}
+
+#tekstualni_odgovor{
+    background-color: black;
+    font-weight: bold;
+    color: white;
+    margin: 0 auto;
+    width: 20em;
+    height: 3em;
+}
+
+#prikaz_odg{
+    text-align: center;
+    color:black;
+    font-weight: bold; 
+}
+
+#potvrdi{
+    margin: 10px;
+    padding: 10px;
+    box-shadow: 2px 2px 3px #585858;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #cc8b86;
 }
