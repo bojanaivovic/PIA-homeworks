@@ -1,0 +1,76 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: black !important;
+}
+
+.row{
+    background-color: black;
+    border-radius: 30px;
+    box-shadow:  inset 0 0 10px #000000;
+}
+
+img{
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    padding-top: 30px;
+   /* height: 410px !important; */
+}
+
+.logovanje{
+    border: 1px solid white;
+    outline: none;
+    height: 50px;
+    width: 100%;
+    background-color: black;
+    color: white;
+    border-radius: 4px;
+    font-weight: bold;
+
+}
+
+.logovanje:hover{
+    background: white;
+    color: black;
+    border: 1px solid black;
+}
+
+.logIn, .registration{
+    padding-top: 110px;
+}
+h1,i{
+    color: white;
+    display: inline-block;
+    padding: 0 5px;
+}
+h1{
+    position: relative;
+    top: -5px;
+}
+h4{
+    color: white;
+}
+a:link{
+    text-decoration: none;
+}
+
+.form-div{
+    margin: 50px 100px;
+    padding: 30px 20px;
+    border: 1px solid white;
+    color: white;
+    border-radius: 10px;
+    max-width: 400px;
+}
+
+.btn{
+    width: 100% !important;
+}
+
+.logout{
+    float: right;
+}
