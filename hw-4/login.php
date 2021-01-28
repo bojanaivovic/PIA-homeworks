@@ -43,12 +43,12 @@
                             <div>
                             <div class="form-row">
                                 <div class="col-lg-7">
-                                    <input type="password" name="password1" placeholder="******" class="form-control" required>
+                                    <input type="password" name="password1" placeholder="******" class="form-control my-3" required>
                                 </div>
                             <div>
                             <div class="form-row">
                                 <div class="col-lg-7">
-                                    <button type="submit" name="signIn" class="logovanje mt-3 mb-5">Login</button>
+                                    <button type="submit" name="signIn" class="logovanje mt-3 mb-4">Login</button>
                                 </div>
                             <div>
                             <a href="register.php">Register here</a>

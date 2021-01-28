@@ -5,6 +5,8 @@ require 'config_db.php';
 $name="";
 $username="";
 $email="";
+$admin="admin";
+
 $errors=array();
 
 if(isset($_POST['register'])){
@@ -14,9 +16,6 @@ if(isset($_POST['register'])){
     $password1=$_POST['password1'];
     $password2=$_POST['password2'];
 
-    if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
-        $errors['email']="Email address is invalid";
-    }
 
     if(strlen($username)<5){
         array_push($errors, "Username must be at least 5 characters..");
@@ -47,12 +46,10 @@ if(isset($_POST['register'])){
 
     if(count($errors)===0){
         $password1=password_hash($password1,PASSWORD_DEFAULT);
-        $token=bin2hex(random_bytes(50));
-        $verified=false;
 
-        $sql="INSERT INTO users(name, username, email, verified, token, password) VALUES (?,?,?,?,?,?)";
+        $sql="INSERT INTO users(name, username, email, password) VALUES (?,?,?,?)";
         $stmt=$conn->prepare($sql);
-        $stmt->bind_param('sssbss', $name, $username, $email, $verified, $token, $password1);
+        $stmt->bind_param('ssss', $name, $username, $email, $password1);
         
         
         if ($stmt->execute()){
@@ -61,10 +58,7 @@ if(isset($_POST['register'])){
             $_SESSION['name']=$name;
             $_SESSION['username']=$username;
             $_SESSION['email']=$email;
-            $_SESSION['verified']=$verified;
-            $_SESSION['message']="You are now logged in";
-            $_SESSION['alert-class']="alert-success";
-            header('location: index.php');
+            header('location: login.php');
             exit();
         }
         else{
@@ -98,8 +92,12 @@ if(isset($_POST['signIn'])){
                 $_SESSION['id']=$user['id'];
                 $_SESSION['username']=$user['username'];
                 $_SESSION['email']=$user['email'];
-                $_SESSION['verified']=$user['verified'];
-                header('location: index.php');
+                if($_SESSION['admin']=$user['admin']){
+                    header('location: adminPage.php');
+                }
+                else{
+                    header('location: index.php');
+                }
                 exit();
             }
             else{
@@ -107,7 +105,7 @@ if(isset($_POST['signIn'])){
             }
         }
         else{
-            array_push($errors, "Username not exists.");
+            array_push($errors, "Username or email not exists.");
         }
     }
 }
@@ -118,7 +116,6 @@ if(isset($_GET['logout'])){
     unset($_SESSION['name']);
     unset($_SESSION['username']);
     unset($_SESSION['email']);
-    unset($_SESSION['verified']);
     header('location: login.php');
     exit();
 }

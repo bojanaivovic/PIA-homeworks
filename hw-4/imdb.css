@@ -34,9 +34,9 @@ img{
 }
 
 .logovanje:hover{
-    background: white;
-    color: black;
-    border: 1px solid black;
+    background:#333;
+    color: white;
+    border: 1px solid white;
 }
 
 .logIn, .registration{
@@ -67,10 +67,56 @@ a:link{
     max-width: 400px;
 }
 
+
 .btn{
     width: 100% !important;
 }
 
 .logout{
     float: right;
+}
+
+nav{
+    background-color: white;
+}
+
+.navbar-brand{
+    font-family: Tahoma, sans-serif;
+    font-weight: bold;
+    font-size: 50pt;
+    color: #999 !important;
+}
+
+ul li a{
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+ul li:hover{
+    background-color: gray;
+}
+
+a,h1{
+    padding: 15px;
+}
+
+.btn-sm{
+    outline: none;
+    color:#999;
+    border-radius: 24px;
+    font-weight: bold;
+    text-align: right;
+}
+.btn-sm:hover{
+    color:white;
+    text-decoration: none;
+}
+
+.input-group{
+    padding: 5px 20px 5px 800px;
+}
+#search-input{
+    background-color: black;
+    border: #555;
+    box-shadow: none; 
 }

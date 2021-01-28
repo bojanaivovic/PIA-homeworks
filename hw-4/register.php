@@ -37,7 +37,7 @@
                         <form method="post" action="register.php">
                             <div class="form-row">
                                 <div class="col-lg-7">
-                                    <input type="text" name="name" value="<?php echo $name; ?>" placeholder="Your name" class="form-control my-4" required>
+                                    <input type="text" name="name" value="<?php echo $name; ?>" placeholder="Your name" class="form-control my-3" required>
                                 </div>
                             <div>
                             <div class="form-row">
@@ -57,12 +57,12 @@
                             <div>
                             <div class="form-row">
                                 <div class="col-lg-7">
-                                    <input type="password" name="password2" placeholder="Confirm password" class="form-control" required>
+                                    <input type="password" name="password2" placeholder="Confirm password" class="form-control my-3" required>
                                 </div>
                             <div>
                             <div class="form-row">
                                 <div class="col-lg-7">
-                                    <button type="submit" name="register" class="logovanje mt-3 mb-5">Create your IMDb account</button>
+                                    <button type="submit" name="register" class="logovanje mt-3 mb-4">Create your IMDb account</button>
                                 </div>
                             <div>
                             <a href="login.php">Already have an account?</a>
