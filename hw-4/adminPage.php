@@ -25,14 +25,14 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 </head>
 <body>
-<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+<nav class="navbar navbar-expand-md navbar-dark bg-dark navbar-fixed-top">
         <i class="fa fa-imdb" style="font-size:50px; color:#ff980f"></i>  
-		<a class="navbar-brand" href="index.php">M O V I E S</a>
+		<a class="navbar-brand" href="adminPage.php">M O V I E S</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
 			<span class="navbar-toggler-icon"></span>
         </button>
         <div class="input-group">
-            <form class="navbar-form navbar-left" action="index.php" method="post">
+            <form class="navbar-form navbar-left" action="adminPage.php" method="post">
               <input type="text" id="search-input" name="search" class="form-control" placeholder="Search..." autocomplete="off" required>
               <span class="input-group-btn">
                 <button class="btn" type="submit" name="isearch" style="background-color: #E5880D"><i class="fa fa-search" style=color:black;></i></button>
@@ -40,12 +40,20 @@
             </form>
         </div>
         <div class="logout-btn">
-            <a href="index.php?logout=1" class="btn-sm">
+            <a href="adminPage.php?logout=1" class="btn-sm">
             <span class="glyphicon glyphicon-log-out"></span>
             Logout 
             </a>
         </div>
-    </nav><br>       
+    </nav><br><br><br><br> 
+    <form method="post">
+        <button type="submit" name="addMovie" class="logovanje mt-3 mb-4">Add movie</button> 
+    </form> 
+    <?php 
+        if(isset($_POST['addMovie'])) {
+            header('location: addMovie.php');
+        }
+    ?>  
 <!--  ZA SEARCH -->     
     <?php
         if(isset($_POST['isearch'])) {

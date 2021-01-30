@@ -117,7 +117,8 @@ a,h1{
 #search-input{
     background-color: black;
     border: #555;
-    box-shadow: none; 
+    box-shadow: none;
+    color: white !important; 
 }
 
 .genres{
@@ -144,3 +145,66 @@ a,h1{
     width: 350px !important; 
     vertical-align: middle;
 }
+
+.inputAddMovie, textarea, #myFile {
+    width: 60%;
+    padding: 8px;
+    border-radius: 4px;
+    resize: vertical;
+    margin:8px 20% !important;
+    background-color: #2f2f2f;
+    color: white !important;
+    box-shadow: none;
+  }
+  
+  input[type=submit] {
+    background-color:black;
+    color: white;
+    padding: 12px 20px;
+    border: 1px solid white;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 8px;
+    margin:8px 20%;
+    float: right;
+    width: 60% ;
+  }
+  
+  input[type=submit]:hover {
+    background-color:white;
+    color: black;
+  }
+  
+  .col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+  }
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  #conMovie{
+      padding: 80px;
+     
+  }
+
+ input[type="file"] {
+    background-color: black !important;
+ }
+
+ #close{
+    padding-left: 80%;
+    color: white;
+    font-size: 24pt;
+ }
+ #close:link{
+    text-decoration: none;
+ }
+
+ .d-block{
+    height: 200px !important;
+ }
