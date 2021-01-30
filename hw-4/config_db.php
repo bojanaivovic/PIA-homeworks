@@ -3,7 +3,7 @@
 $host="localhost";
 $user="root";
 $password="";
-$dbname="registration";
+$dbname="imdb";
 
 $conn=new mysqli($host, $user, $password, $dbname);
 

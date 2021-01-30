@@ -18,7 +18,6 @@ img{
     border-top-left-radius: 30px;
     border-bottom-left-radius: 30px;
     padding-top: 30px;
-   /* height: 410px !important; */
 }
 
 .logovanje{
@@ -119,4 +118,29 @@ a,h1{
     background-color: black;
     border: #555;
     box-shadow: none; 
+}
+
+.genres{
+    color: #ffb95c;
+    opacity: 0.4;
+    font-weight: bold;
+    font-family: Tahoma, sans-serif;
+    letter-spacing: 10px;
+}
+
+.title{
+    color: white;
+    opacity: 0.6;
+    font-weight: bold;
+    text-align: center;
+    padding: 5px;
+}
+
+.carousel{
+    padding: 30px 0;
+}
+.navbar-form .form-control {
+    display: inline-block;
+    width: 350px !important; 
+    vertical-align: middle;
 }

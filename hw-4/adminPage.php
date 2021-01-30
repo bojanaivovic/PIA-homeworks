@@ -22,19 +22,22 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 </head>
 <body>
 <nav class="navbar navbar-expand-md navbar-dark bg-dark">
         <i class="fa fa-imdb" style="font-size:50px; color:#ff980f"></i>  
-		<a class="navbar-brand" href="#">M O V I E S</a>
+		<a class="navbar-brand" href="index.php">M O V I E S</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
 			<span class="navbar-toggler-icon"></span>
         </button>
         <div class="input-group">
-              <input type="text" id="search-input" class="form-control" placeholder="Search..." autocomplete="off">
+            <form class="navbar-form navbar-left" action="index.php" method="post">
+              <input type="text" id="search-input" name="search" class="form-control" placeholder="Search..." autocomplete="off" required>
               <span class="input-group-btn">
-                <button class="btn" type="button" style="background-color: #E5880D"><i class="fa fa-search" style=color:black;></i></button>
+                <button class="btn" type="submit" name="isearch" style="background-color: #E5880D"><i class="fa fa-search" style=color:black;></i></button>
               </span>
+            </form>
         </div>
         <div class="logout-btn">
             <a href="index.php?logout=1" class="btn-sm">
@@ -42,6 +45,159 @@
             Logout 
             </a>
         </div>
-    </nav>
+    </nav><br>       
+<!--  ZA SEARCH -->     
+    <?php
+        if(isset($_POST['isearch'])) {
+    ?>
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+            <?php
+                $search =$_POST['search'];
+                $sql = "SELECT * FROM movies WHERE title LIKE '%$search%'";
+                $result = mysqli_query($conn, $sql);
+                $resultCheck = mysqli_num_rows($result);
+            ?>
+                <div class="row">
+                <?php if($resultCheck > 0) { 
+                    while($row=$result->fetch_assoc()) : ?>
+                    <div class="col-3"><img class="d-block w-100" src="<?= $row['image']?>"><p class="title"><?php echo $row['title'] ?></p></div>
+                    <?php endwhile; } ?>
+                </div>
+            </div>
+        </div>
+    </div>
+<!--KRAJ SEARCH -->
+    <?php
+        }
+        elseif(!isset($_POST['isearch'])){
+         $res=$conn->query("SELECT * FROM movies") or die($conn->error) ; 
+        
+    ?>
+    <h3 class="genres">All Movies</h3>
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+            <?php
+                $sql = "SELECT * FROM movies";
+                $result = mysqli_query($conn, $sql);
+                $resultCheck = mysqli_num_rows($result);
+            ?>
+                <div class="row">
+                <?php if($resultCheck > 0) { 
+                    while($row=$result->fetch_assoc()) : ?>
+                    <div class="col-3"><img class="d-block w-100" src="<?= $row['image']?>"><p class="title"><?php echo $row['title'] ?></p></div>
+                    <?php endwhile; } ?>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br><br>
+    <h3 class="genres"> Crime Movies</h3>
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <?php 
+            ?>
+            <div class="carousel-item active">
+            <?php
+                $sql = "SELECT * FROM movies WHERE genres LIKE '%crime%'";
+                $result = mysqli_query($conn, $sql);
+                $resultCheck = mysqli_num_rows($result);
+            ?>
+                <div class="row">
+                <?php if($resultCheck > 0) { 
+                    while($row=$result->fetch_assoc()) : ?>
+                    <div class="col-3"><img class="d-block w-100" src="<?= $row['image']?>"><p class="title"><?php echo $row['title'] ?></p></div>
+                    <?php endwhile; } ?>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br><br>
+    <h3 class="genres">Action Movies</h3>
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel"> 
+            <div class="carousel-item active">
+            <?php
+                $sql = "SELECT * FROM movies WHERE genres LIKE '%action%'";
+                $result = mysqli_query($conn, $sql);
+                $resultCheck = mysqli_num_rows($result);
+            ?>
+                <div class="row">
+                <?php 
+                if($resultCheck > 0) {
+                    while($row=$result->fetch_assoc()): ?>
+                    <div class="col-3"><img class="d-block w-100" src="<?= $row['image']?>"><p class="title"><?php echo $row['title'] ?></p></div>
+                    <?php 
+                endwhile; ?>
+                </div>
+            </div> 
+            <?php } ?>
+        </div>
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <h3 class="genres">Romance Movies</h3>
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <?php 
+            ?>
+            <div class="carousel-item active">
+            <?php
+                $sql = "SELECT * FROM movies WHERE genres LIKE '%romance%'";
+                $result = mysqli_query($conn, $sql);
+                $resultCheck = mysqli_num_rows($result);
+            ?>
+                <div class="row">
+                <?php if($resultCheck > 0) { 
+                    while($row=$result->fetch_assoc()) : ?>
+                    <div class="col-3"><img class="d-block w-100" src="<?= $row['image']?>"><p class="title"><?php echo $row['title'] ?></p></div>
+                    <?php endwhile; } ?>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <h3 class="genres">Drama Movies</h3>
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <?php 
+            ?>
+            <div class="carousel-item active">
+            <?php
+                $sql = "SELECT * FROM movies WHERE genres LIKE '%drama%'";
+                $result = mysqli_query($conn, $sql);
+                $resultCheck = mysqli_num_rows($result);
+            ?>
+                <div class="row">
+                <?php if($resultCheck > 0) { 
+                    while($row=$result->fetch_assoc()) : ?>
+                    <div class="col-3"><img class="d-block w-100" src="<?= $row['image']?>"><p class="title"><?php echo $row['title'] ?></p></div>
+                    <?php endwhile; } ?>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <h3 class="genres">Horror Movies</h3>
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <?php 
+            ?>
+            <div class="carousel-item active">
+            <?php
+                $sql = "SELECT * FROM movies WHERE genres LIKE '%horror%'";
+                $result = mysqli_query($conn, $sql);
+                $resultCheck = mysqli_num_rows($result);
+            ?>
+                <div class="row">
+                <?php if($resultCheck > 0) { 
+                    while($row=$result->fetch_assoc()) : ?>
+                    <div class="col-3"><img class="d-block w-100" src="<?= $row['image']?>"><p class="title"><?php echo $row['title'] ?></p></div>
+                    <?php endwhile; } ?>
+                </div>
+            </div>
+        </div>
+    </div>
+    <?php }?>
 </body>
 </html>
