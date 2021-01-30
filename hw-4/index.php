@@ -108,7 +108,7 @@
                 <?php if($resultCheck > 0) { 
                     while($row=$result->fetch_assoc()) : ?>
                     <div class="col-3"><img class="d-block w-100" src="<?= $row['image']?>"><p class="title"><?php echo $row['title'] ?></p></div>
-                    <?php endwhile; } ?>
+                <?php endwhile; } ?>
                 </div>
             </div>
         </div>

@@ -48,12 +48,54 @@
         </div>
     </nav><br><br><br>
     <div id="conMovie">
+
+    
+<?php 
+        if(isset($_POST['title'])) {
+            $genres=$_POST['genres'];
+            $title=$_POST['title'];
+            $year=$_POST['year'];
+            $description= $_POST['description'];
+            $directors=$_POST['directors'];
+            $production=$_POST['production'];
+            $scenarist=$_POST['scenarist'];
+            $runtime= $_POST['runtime'];
+            $rating=$_POST['rating'];
+            $stars=$_POST['stars'];
+            $image=$_POST['image'];
+        
+            $sql="SELECT*FROM movies  WHERE title='$title' AND year='$year'";
+            $result = mysqli_query($conn, $sql);
+    
+            if(mysqli_num_rows($result) > 0) {  ?>
+                <div class="row">
+                    <div class="alert alert-warning col-75" id="warning">
+                        <p>THE MOVIE ALREADY EXISTS</p>
+                    </div>
+                </div> 
+
+    <?php
+    }    
+        else{
+            $s ="INSERT INTO movies (title, year, description, genres, directors, production, scenarist, runtime, rating, stars, image) VALUES ('$title', '$year', '$description', '$genres', '$directors', '$production', '$scenarist', '$runtime', '$rating', '$stars', '$image')";
+            $res = mysqli_query($conn, $s);
+            if($res) {
+                header("Location: adminPage.php");
+                exit(); 
+            }else {
+                header("Location: adminPage.php?error=Error");
+                exit(); 
+            }
+        }
+    }
+?>
+    
     <a href="adminPage.php" id="close">x</a>
     <div class="container">
-        <form action="addMovieToBase.php" method="post">
+        <form action="addMovie.php" method="post">
             <div class="row">
             <div class="col-75">
-                <input type="text"class="inputAddMovie" id="title" name="title" placeholder="Add title..."  required>
+                <input type="text"class="inputAddMovie" id="title" name="title" placeholder="Add title..."   autocomplete="off" required>
             </div>
             </div>
             <div class="row">
@@ -63,42 +105,42 @@
             </div>
             <div class="row">
             <div class="col-75">
-                <textarea id="description" name="description" placeholder="Add description..."  style="height:200px" required></textarea>
+                <textarea id="description" name="description" placeholder="Add description..."  style="height:200px"  autocomplete="off" required></textarea>
             </div>
             </div>
             <div class="row">
             <div class="col-75">
-                <input type="text" class="inputAddMovie" id="genres" name="genres" placeholder="Add genres..."  required>
+                <input type="text" class="inputAddMovie" id="genres" name="genres" placeholder="Add genres..."   autocomplete="off" required>
             </div>
             </div>
             <div class="row">
             <div class="col-75">
-                <input type="text" class="inputAddMovie" id="directors" name="directors" placeholder="Add directors..."  required>
+                <input type="text" class="inputAddMovie" id="directors" name="directors" placeholder="Add directors..."  autocomplete="off"  required>
             </div>
             </div>
             <div class="row">
             <div class="col-75">
-                <input type="text" class="inputAddMovie" id="production" name="production" placeholder="Add production..."  required>
+                <input type="text" class="inputAddMovie" id="production" name="production" placeholder="Add production..."   autocomplete="off" required>
             </div>
             </div>
             <div class="row">
             <div class="col-75">
-                <input type="text" class="inputAddMovie" id="runtime" name="runtime" placeholder="Add runtime..."  required>
+                <input type="text" class="inputAddMovie" id="runtime" name="runtime" placeholder="Add runtime..."   autocomplete="off" required>
             </div>
             </div>
             <div class="row">
             <div class="col-75">
-                <input type="text" class="inputAddMovie" id="scenarist" name="scenarist" placeholder="Add scenarists..."  required>
+                <input type="text" class="inputAddMovie" id="scenarist" name="scenarist" placeholder="Add scenarists..."   autocomplete="off" required>
             </div>
             </div>
             <div class="row">
             <div class="col-75">
-                <input type="text" class="inputAddMovie" id="rating" name="rating" placeholder="Add rating..."  required>
+                <input type="text" class="inputAddMovie" id="rating" name="rating" placeholder="Add rating..."  autocomplete="off" required>
             </div>
             </div>
             <div class="row">
             <div class="col-75">
-                <input type="text" class="inputAddMovie" id="stars" name="stars" placeholder="Add stars..." required>
+                <input type="text" class="inputAddMovie" id="stars" name="stars" placeholder="Add stars..."  autocomplete="off" required>
             </div>
             </div>
             <div class="row">

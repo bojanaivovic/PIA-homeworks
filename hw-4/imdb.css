@@ -146,7 +146,7 @@ a,h1{
     vertical-align: middle;
 }
 
-.inputAddMovie, textarea, #myFile {
+.inputAddMovie, textarea, #myFile{
     width: 60%;
     padding: 8px;
     border-radius: 4px;
@@ -156,6 +156,11 @@ a,h1{
     color: white !important;
     box-shadow: none;
   }
+
+  #warning {
+    width: 60%;
+    margin:8px 20% !important;
+  }  
   
   input[type=submit] {
     background-color:black;
