@@ -1,4 +1,4 @@
-<?php require_once 'controllers.php'; ?>
+<?php require_once 'config_db.php'; ?>
 <?php session_start(); ?>
 <!DOCTYPE html>
 <html>
@@ -28,12 +28,12 @@
 <body>
 <nav class="navbar navbar-expand-md navbar-dark bg-dark navbar-fixed-top">
         <i class="fa fa-imdb" style="font-size:50px; color:#ff980f"></i>  
-		<a class="navbar-brand" href="adminPage.php">M O V I E S</a>
+		<a class="navbar-brand" href="index.php">M O V I E S</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
 			<span class="navbar-toggler-icon"></span>
         </button>
         <div class="input-group">
-            <form class="navbar-form navbar-left" action="adminPage.php" method="post">
+            <form class="navbar-form navbar-left" action="index.php" method="post">
               <input type="text" id="search-input" name="search" class="form-control" placeholder="Search..." autocomplete="off" required>
               <span class="input-group-btn">
                 <button class="btn" type="submit" name="isearch" style="background-color: #E5880D"><i class="fa fa-search" style=color:black;></i></button>
@@ -47,7 +47,7 @@
             </a>
         </div>
     </nav><br><br><br>
-    <a href="adminPage.php" id="close">x</a>
+    <a href="index.php" id="close">x</a>
 
     <div class="container-fluid" style="display: flex">
         <div class="column1">
@@ -69,26 +69,18 @@
         </div>
         <div class="column2">              
                 <div class="description"><?php echo $row['description'] ?></div> <br><br>        
-                <div class="stars" id="info">  <p><b> STARS:</b> <?php echo  $row['stars'] ?> </p> </div><br>
+                <div class="stars" id="info">  <p><b> STARS:</b> <?php echo  $row['stars'] ?> </p> </div> </br>
                 <div class="production" id="info"> <p><b> PRODUCTION: </b> <?php echo $row['production']  ?> </p></div></br>
-                <div class="directors" id="info">  <p><b> DIRECTORS:</b> <?php echo $row['directors']?> </p></div><br>
-                <div class="scenarist" id="info">  <p><b> SCENARIST: </b> <?php echo  $row['scenarist'] ?> </p></div><br>
-                <div class="rating" id="info">  <p><b> RATING: </b> <?php echo  $row['rating'] ?> </p></div>       
-                
-        <div class="buttonsDeleteUpdate" style="display:flex">
-            <a href="deleteMovie.php?title=<?php echo $row['title'] ?>">
-                <button type="submit" id="delete" name="delete" class="logovanje mt-3 mb-4">Delete</button>
-            </a>
-            <a href="editMovie.php?title=<?php echo $row['title'] ?>">
-                <button type="submit" id="edit" name="edit" class="logovanje mt-3 mb-4">Edit</button>
-            </a>            
+                <div class="directors" id="info">  <p><b> DIRECTORS:</b> <?php echo $row['directors']?> </p></div><br><br>
+                <div class="scenarist" id="info">  <p><b> SCENARIST: </b> <?php echo  $row['scenarist'] ?> </p></div><br><br>
+                <div class="scenarist" id="info">  <p><b> SCENARIST: </b> <?php echo  $row['scenarist'] ?> </p></div><br><br>
+                <div class="rating" id="info">  <p><b> RATING: </b> <?php echo  $row['rating'] ?> </p></div> 
+                <?php endwhile;
+        }   
+            
+        ?>
         </div> 
-    </div> 
 </div>
-<?php
- endwhile;
-    }     
-?>
 
 </body>
 </html>

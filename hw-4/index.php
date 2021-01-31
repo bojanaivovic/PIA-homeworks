@@ -63,7 +63,7 @@
                 <?php if($resultCheck > 0) { 
                     while($row=$result->fetch_assoc()) : ?>
                     <div class="col-3"><img class="d-block w-100" src="<?= $row['image']?>">
-                    <a href='singleMovie.php?title=<?php echo $row['title']?>'><p class="title"><?php echo $row['title']; ?></a></div>
+                    <a href='singleMovieUser.php?title=<?php echo $row['title']?>'><p class="title"><?php echo $row['title']; ?></a></div>
                 <?php endwhile; } ?>
                 </div>
             </div>
@@ -88,7 +88,7 @@
                 <?php if($resultCheck > 0) { 
                     while($row=$result->fetch_assoc()) : ?>
                     <div class="col-3"><img class="d-block w-100" src="<?= $row['image']?>">
-                    <a href='singleMovie.php?title=<?php echo $row['title']?>'><p class="title"><?php echo $row['title']; ?></a></div>
+                    <a href='singleMovieUser.php?title=<?php echo $row['title']?>'><p class="title"><?php echo $row['title']; ?></a></div>
                 <?php endwhile; } ?>
                 </div>
             </div>
@@ -110,7 +110,7 @@
                 <?php if($resultCheck > 0) { 
                     while($row=$result->fetch_assoc()) : ?>
                     <div class="col-3"><img class="d-block w-100" src="<?= $row['image']?>">
-                    <a href='singleMovie.php?title=<?php echo $row['title']?>'><p class="title"><?php echo $row['title']; ?></a></div>
+                    <a href='singleMovieUser.php?title=<?php echo $row['title']?>'><p class="title"><?php echo $row['title']; ?></a></div>
                 <?php endwhile; } ?>
                 </div>
             </div>
@@ -130,7 +130,7 @@
                 if($resultCheck > 0) {
                     while($row=$result->fetch_assoc()): ?>
                     <div class="col-3"><img class="d-block w-100" src="<?= $row['image']?>">
-                    <a href='singleMovie.php?title=<?php echo $row['title']?>'><p class="title"><?php echo $row['title']; ?></a></div>
+                    <a href='singleMovieUser.php?title=<?php echo $row['title']?>'><p class="title"><?php echo $row['title']; ?></a></div>
                 <?php endwhile; ?>
                 </div>
             </div> 
@@ -153,7 +153,7 @@
                 <?php if($resultCheck > 0) { 
                     while($row=$result->fetch_assoc()) : ?>
                     <div class="col-3"><img class="d-block w-100" src="<?= $row['image']?>">
-                    <a href='singleMovie.php?title=<?php echo $row['title']?>'><p class="title"><?php echo $row['title']; ?></a></div>
+                    <a href='singleMovieUser.php?title=<?php echo $row['title']?>'><p class="title"><?php echo $row['title']; ?></a></div>
                 <?php endwhile; } ?>
                 </div>
             </div>
@@ -175,7 +175,7 @@
                 <?php if($resultCheck > 0) { 
                     while($row=$result->fetch_assoc()) : ?>
                     <div class="col-3"><img class="d-block w-100" src="<?= $row['image']?>">
-                    <a href='singleMovie.php?title=<?php echo $row['title']?>'><p class="title"><?php echo $row['title']; ?></a></div>
+                    <a href='singleMovieUser.php?title=<?php echo $row['title']?>'><p class="title"><?php echo $row['title']; ?></a></div>
                 <?php endwhile; } ?>
                 </div>
             </div>
@@ -197,7 +197,7 @@
                 <?php if($resultCheck > 0) { 
                     while($row=$result->fetch_assoc()) : ?>
                     <div class="col-3"><img class="d-block w-100" src="<?= $row['image']?>">
-                    <a href='singleMovie.php?title=<?php echo $row['title']?>'><p class="title"><?php echo $row['title']; ?></a></div>
+                    <a href='singleMovieUser.php?title=<?php echo $row['title']?>'><p class="title"><?php echo $row['title']; ?></a></div>
                 <?php endwhile; } ?>
                 </div>
             </div>

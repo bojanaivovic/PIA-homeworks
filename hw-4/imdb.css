@@ -221,14 +221,14 @@ a,h1{
 
  /*SINGLE MOVIE*/
  .column1{
-     margin:80px 40px ;
+     margin:70px 40px ;
      color:#999999;
      font-weight: bold;
      text-align: center;
  }
 
  .column2{
-     margin: 150px;
+     margin: 150px 150px 80px 150px;
      color:#999999;
      text-align: justify;
      font-weight: bold;
@@ -247,4 +247,9 @@ a,h1{
     color:#ff980f;
     opacity: 0.6;
     padding-right: 15px;
+ }
+
+ #delete, #edit{
+     margin: 0 20px;
+     padding: 0 50px !important;
  }
