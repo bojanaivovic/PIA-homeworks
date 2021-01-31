@@ -64,7 +64,7 @@
             $stars=$_POST['stars'];
             $image=$_POST['image'];
         
-            $sql="SELECT*FROM movies  WHERE title='$title' AND year='$year'";
+            $sql="SELECT*FROM movies  WHERE title='$title'";
             $result = mysqli_query($conn, $sql);
     
             if(mysqli_num_rows($result) > 0) {  ?>
